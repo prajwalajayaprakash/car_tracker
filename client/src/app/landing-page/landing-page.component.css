@@ -1,0 +1,23 @@
+body {
+
+  background: url(https://source.unsplash.com/IGqMKnl6LNE);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+
+}
+h1 {
+  padding-top:15%;
+  text-align: center;
+  color: white;
+}
+
+.row {
+  padding-top: 5%;
+  margin-left: 280px;
+}
+
+.col {
+  height: 260px;
+}

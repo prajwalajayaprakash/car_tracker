@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row" id="top">
+    <div class="col">
+      <h1>ALERTS</h1>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>VIN NUMBER</th>
+      <th>TIMESTAMP</th>
+      <th>ALERT REASON</th>
+      <th>ALERT PRIORITY</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let alert of alertsObservable | async">
+      <td>{{alert.vin}}</td>
+      <td>{{alert.timestamp| date: "short"}}</td>
+      <td>{{alert.alertReason}}</td>
+      <td>
+        <p *ngIf="alert.priority === 'HIGH'; then boldAlert else normal"></p>
+        <ng-template #boldAlert><p class="highAlert">{{alert.priority}}</p></ng-template>
+        <ng-template #normal>{{alert.priority}}</ng-template>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+
+
+
+
+
+
+
+

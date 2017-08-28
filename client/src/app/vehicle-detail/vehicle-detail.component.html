@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+<br/>
+<a [routerLink] = "['/vehicles']"><button class="btn btn-primary btn-md">VEHICLE LIST</button></a>
+<h1>VEHICLE DETAILS OF {{vehicle.make}} {{vehicle.model}}</h1>
+<br/>
+<p>
+  <br/>
+  <strong>Vin</strong>   : {{vehicle.vin}}<br/><br/>
+
+  <strong>Make</strong>  : {{vehicle.make}}<br/><br/>
+
+  <strong>Model</strong> : {{vehicle.model}}<br/><br/>
+
+  <strong>Year</strong>  : {{vehicle.year}}<br/><br/>
+
+  <strong>Red Line RPM</strong>  : {{vehicle.redlineRpm}}<br/><br/>
+
+  <strong>Max Fuel Volume</strong> : {{vehicle.maxFuelVolume}}<br/><br/>
+
+  <strong>Last Service Date</strong> : {{vehicle.lastServiceDate| date: "short"}}<br/><br/>
+</p>
+      <a [routerLink] = "['/readings', vehicle.vin]"><button class="btn btn-success btn-md">READINGS</button></a>
+      <a [routerLink]= "['/alerts', vehicle.vin]"><button class="btn btn-danger btn-md">ALERTS</button></a>
+</div>
+</body>
+
+

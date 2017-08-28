@@ -1,0 +1,95 @@
+<div class="container">
+<div class="row" id="top">
+  <div class="col">
+    <a [routerLink] = "['/vehicles']"><button class="btn btn-primary btn-md" id="vehiclelist">VEHICLE LIST</button></a>
+    <h1>READINGS</h1>
+  </div>
+  <div class="col map">
+    <agm-map [latitude]="latitude" [longitude]="longitude">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+  </div>
+
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>TIMESTAMP</th>
+    <th>FUEL VOLUME</th>
+    <th>SPEED</th>
+    <th>LOCATION</th>
+    <th>ENGINE HP</th>
+    <th>CHECK ENGINE LIGHT ON</th>
+    <th>LOW COOLANT</th>
+    <th>CRUISE CONTROL</th>
+    <th>ENGINE RPM</th>
+    <th colspan="4">TIRE PRESSURES</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let reading of readings">
+    <td>{{reading.timestamp| date:"short"}}{{timeLabel(reading.timestamp| date:"mediumTime")}}</td>
+    <td>{{reading.fuelVolume}}{{fuelVolumechart(reading.fuelVolume)}}</td>
+    <td>{{reading.speed}}{{speedChart(reading.speed)}}</td>
+    <td><button class="btn btn-primary btn-sm" id="location" (click)="showLocation(reading.latitude, reading.longitude)">Lat: {{reading.latitude}} <br/> Lng: {{reading.longitude}}</button></td>
+    <td>{{reading.engineHp}}</td>
+    <td>{{reading.checkEngineLightOn}}</td>
+    <td>{{reading.engineCoolantLow}}</td>
+    <td>{{reading.cruiseControlOn}}</td>
+    <td>{{reading.engineRpm}}{{engineRPMChart(reading.engineRpm)}}</td>
+    <td>FL: {{reading.tires.frontLeft}}</td>
+    <td>FR: {{reading.tires.frontRight}}</td>
+    <td>RL: {{reading.tires.rearLeft}}</td>
+    <td>RR: {{reading.tires.rearRight}}</td>
+  </tr>
+  </tbody>
+</table>
+  <button id="plot" class="btn btn-success btn-md" (click)="graphs()">PLOT GRAPHS</button>
+  <div class="row">
+    <div class="col">
+      <!--<div style="display: block;">-->
+      <canvas baseChart width="100px" height="100px"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div class="col">
+      <canvas baseChart width="100px" height="100px"
+              [datasets]="lineChartData1"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+
+      <div class="col">
+      <canvas baseChart width="100px" height="100px"
+              [datasets]="lineChartData2"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+ #h1, #h4 {
+  text-align: center;
+  color: white;
+  padding-top: 70px;
+   }
+
+th {
+  color: cadetblue;
+  padding: 10px 10px 10px 10px;
+}
+
+
+.top {
+  background: url("http://www.slantnosefox.com/picturehosting/IMG_6720%20OCHP-resized.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+
+
+}
+
+

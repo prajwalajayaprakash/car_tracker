@@ -1,0 +1,31 @@
+body {
+  background: url("https://s-media-cache-ak0.pinimg.com/736x/5b/21/b0/5b21b08ec04edf87cc9d48ecbcbc0e75.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
+p {
+  border: 1px solid black;
+  margin-left: 32%;
+  width: 400px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: medium;
+}
+
+h1 {
+  text-align: center;
+  color: cadetblue;
+ }
+
+.btn-warning {
+  float: left;
+}
+
+.btn-danger {
+  float: right;
+}
+
+
+
+

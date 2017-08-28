@@ -1,0 +1,24 @@
+h1, h4{
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+th {
+  color: cadetblue;
+}
+
+#top {
+  background: url("https://www.carmd.com/wp/wp-content/uploads/2015/07/CarMD_Check_Engine_HEADER.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+.highAlert {
+  font-weight: bold;
+}

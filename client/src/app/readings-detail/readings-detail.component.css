@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+th {
+  color: cadetblue;
+}
+#vehiclelist {
+  margin-top: 30px;
+}
+agm-map {
+  height: 200px;
+  width: 600px;
+}
+
+#top {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTqX0kYlVAMZFnVt41bymIj8ZwZ1XwLnUpCrE57sJpu3RBa1D");
+}
+
+.map {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#location {
+  width: 100px;
+}
+
+#plot {
+  margin: 20px 0px 30px 500px;
+}
+
+
