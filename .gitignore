@@ -6,3 +6,4 @@ api/pom.xml
 api/*.class
 api/*.settings
 api/.metadata
+.idea
